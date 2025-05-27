@@ -1,3 +1,5 @@
+# This is the code for the publication "Semantic Segmentation for Quantitative Analysis and Comparison of Microstructures of Lower Bainitic and Tempered Martensitic Steels"
+
 # UNet Segmentation App
 
 This project is an end-to-end Python application for semantic segmentation of microscopy images using a UNet model implemented with TensorFlow and Keras.
