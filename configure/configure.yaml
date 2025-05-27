@@ -1,0 +1,64 @@
+
+# 1. Data Configuration
+data:
+  dataset_path: "data/microscopy/"
+  train_image_dir: "data/training_set/original/"
+  train_mask_dir: "data/training_set/mask/"
+  val_image_dir: "data/validation_set/original/"
+  val_mask_dir: "data/validation_set/mask/"
+  test_image_dir: "data/test_set/original/"
+  test_mask_dir: "data/test_set/mask/"
+  bainite_image_dir: "data/bainite_set/original/"
+  bainite_mask_dir: "data/bainite_set/mask/"
+  
+  martensite_image_dir: "data/martensite_set/original/"
+  martensite_mask_dir: "data/martensite_set/mask/"
+  
+  lower_bainite_for_size: "data/original_N5_325_LBITE/cropped/"
+  tempered_martensite_for_size: "data/original_N5_440_TMITE/cropped/"
+  
+  image_size: [480, 640]
+  
+  img_height: 96
+  img_width: 128
+  num_channels: 3
+  
+  
+  num_classes: 2
+  augment: true
+
+# 2. Model Configuration
+model:
+  architecture: "unet"
+  encoder: "resnet34"  # 如果使用预训练 backbone
+  pretrained: true
+  dropout_rate: 0.2
+
+# 3. Training Configuration
+training:
+  epochs: 20
+  batch_size: 32
+  BATCH_SIZE: 32
+  BUFFER_SIZE: 500
+  VAL_SUBSPLITS: 5
+  learning_rate: 0.0001
+  optimizer: "adam"
+  loss_function: "dice_bce"
+  metrics: ["iou", "accuracy"]
+  checkpoint_dir: "checkpoints/"
+  resume_from_checkpoint: false
+
+# 4. Inference Configuration
+inference:
+  input_path: "data/test/images/"
+  output_path: "results/predictions/"
+  threshold: 0.5
+
+# 5. Logging and Output
+logging:
+  use_tensorboard: true
+  log_dir: "logs/"
+  save_every_n_epochs: 5
+  
+  
+ 
