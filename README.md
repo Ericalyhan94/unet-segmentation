@@ -1,4 +1,10 @@
-# This is the code for the publication "Semantic Segmentation for Quantitative Analysis and Comparison of Microstructures of Lower Bainitic and Tempered Martensitic Steels"
+Semantic Segmentation for Quantitative Analysis and Comparison of Microstructures of Lower Bainitic and Tempered Martensitic Steels
+This repository contains the code used in the publication:
+
+"Semantic Segmentation for Quantitative Analysis and Comparison of Microstructures of Lower Bainitic and Tempered Martensitic Steels"
+Available at: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5269562
+
+If you use this code for your research or projects, please kindly cite the paper to acknowledge the work:
 
 # UNet Segmentation App
 
